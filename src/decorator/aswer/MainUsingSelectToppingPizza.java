@@ -1,5 +1,3 @@
-package decorator.pizza;
-
 import java.util.List;
 
 class MainUsingSelectToppingPizza {
@@ -7,7 +5,7 @@ class MainUsingSelectToppingPizza {
         List<String> list;
         LoadToppings loadToppings = new LoadToppings("toppings.txt");
         list = loadToppings.load();
-
+    
         SelectToppingPizza pizza = new SelectToppingPizza();
         for (String topping : list) {
             pizza.addTopping(topping);

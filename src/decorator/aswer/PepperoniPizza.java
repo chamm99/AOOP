@@ -1,7 +1,6 @@
-package decorator.pizza;
-
 class PepperoniPizza extends PizzaDecorator{
     Pizza p;
+    
     public PepperoniPizza(Pizza pizza) {
         p = pizza;
     }
@@ -15,4 +14,7 @@ class PepperoniPizza extends PizzaDecorator{
     public String getName() {
         return p.getName() + "페퍼로니 ";
     }
+
+
+
 }

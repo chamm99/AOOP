@@ -1,7 +1,6 @@
-package decorator.pizza;
-
 class CheesePizza extends PizzaDecorator{
     Pizza p;
+
     public CheesePizza(Pizza pizza) {
         p = pizza;
     }

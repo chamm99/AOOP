@@ -1,13 +1,11 @@
-package decorator.pizza;
-
-class SelectToppingPizza extends Pizza {
+class SelectToppingPizza {
     private boolean pepperoni = false;
     private boolean cheese = false;
     private boolean potato = false;
     private boolean bulgogi = false;
 
     Pizza p = new Pizza();
-
+    
     public SelectToppingPizza() {
         super();
     }
@@ -31,38 +29,23 @@ class SelectToppingPizza extends Pizza {
                 break;
                 
             default:
-                System.out.println("Invalide topping\n");
+                System.out.println("Invalid topping\n");
                 break;
         }
     }               
     public String getName() {
-        if (bulgogi) {
-            p = new BulgogiPizza(p);
-        }
-        if (potato) {
-            p = new PotatoPizza(p);
-        }
-        if (cheese) {
-            p = new CheesePizza(p);
-        }
-        if (pepperoni) {
-            p = new PepperoniPizza(p);
-        }
+        if (bulgogi) { p = new BulgogiPizza(p); }
+        if (potato) { p = new PotatoPizza(p); }
+        if (cheese) { p = new CheesePizza(p); }
+        if (pepperoni) { p = new PepperoniPizza(p); }
         return p.getName();
     }
     public int getPrice() {
-        if (bulgogi) {
-            p = new BulgogiPizza(p);
-        }
-        if (potato) {
-            p = new PotatoPizza(p);
-        }
-        if (cheese) {
-            p = new CheesePizza(p);
-        }
-        if (pepperoni) {
-            p = new PepperoniPizza(p);
-        }
+        if (bulgogi) { p = new BulgogiPizza(p); }
+        if (potato) { p = new PotatoPizza(p); }
+        if (cheese) { p = new CheesePizza(p); }
+        if (pepperoni) { p = new PepperoniPizza(p); }
+        System.out.println("price = " + p.getPrice());
         return p.getPrice();
     }
 }

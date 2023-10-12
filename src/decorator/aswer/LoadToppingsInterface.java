@@ -1,5 +1,3 @@
-package decorator.pizza;
-
 import java.util.List;
 
 public interface LoadToppingsInterface {

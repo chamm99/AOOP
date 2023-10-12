@@ -1,7 +1,6 @@
-package decorator.pizza;
-
-class BulgogiPizza extends PizzaDecorator{
+public class BulgogiPizza extends PizzaDecorator {
     Pizza p;
+
     public BulgogiPizza(Pizza pizza) {
         p = pizza;
     }

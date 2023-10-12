@@ -1,7 +1,6 @@
-package decorator.pizza;
-
-class PotatoPizza extends PizzaDecorator{
+public class PotatoPizza extends Pizza{
     Pizza p;
+
     public PotatoPizza(Pizza pizza) {
         p = pizza;
     }
@@ -13,6 +12,6 @@ class PotatoPizza extends PizzaDecorator{
 
     @Override
     public String getName() {
-        return p.getName() + "포테이토 ";
+        return p.getName() + " 감자 ";
     }
 }
