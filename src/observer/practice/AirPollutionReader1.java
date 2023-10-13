@@ -1,11 +1,10 @@
 package observer.practice;
 
-public class AirPollutionReader1 implements Runnable, Observer {
+public class AirPollutionReader1 implements Runnable {
     private AirPollutionServer1 server;
     private int sleepDuration;
     private boolean stop = false;
     private int num;
-    private int pollution;
     
     public AirPollutionReader1(AirPollutionServer1 server, int num, int duration) {
         this.server = server;
@@ -26,10 +25,5 @@ public class AirPollutionReader1 implements Runnable, Observer {
         }
     }
     
-    public void stopThread() { stop = true; }
-
-    @Override
-    public void update(Object o) {
-        pollution = (Integer) o;
-    }
+    public void stopThread() { stop = true; }    
 }

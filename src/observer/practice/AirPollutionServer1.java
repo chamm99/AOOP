@@ -1,18 +1,12 @@
 package observer.practice;
 
-import java.lang.reflect.Array;
-import java.util.ArrayList;
-
-public class AirPollutionServer1 implements Runnable, Subject {
+public class AirPollutionServer1 implements Runnable {
     private int pollution = 50;
     private boolean stop = false;
     private int sleepDuration;
-    private ArrayList<Observer> observers;
     public AirPollutionServer1(int duration) {
         sleepDuration = duration;
-        observers = new ArrayList<Observer>();
     }
-
 
     @Override
     public void run() {
@@ -38,27 +32,6 @@ public class AirPollutionServer1 implements Runnable, Subject {
         }
     }
 
-    public int getPollution() {
-        return pollution;
-    }
-    public void stopThread() {
-        stop = true;
-    }
-
-    @Override
-    public void addObserver(Observer o) {
-        observers.add(o);
-    }
-
-    @Override
-    public void romoveObserver(Observer o) {
-        observers.remove(o);
-    }
-
-    @Override
-    public void notifyObserver(Object o) {
-        for (Observer obs : observers) {
-            obs.update(o);
-        }
-    }
+    public int getPollution() { return pollution; }
+    public void stopThread() { stop = true; }
 }
