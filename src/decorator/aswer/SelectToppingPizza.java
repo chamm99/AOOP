@@ -1,3 +1,5 @@
+package decorator.aswer;
+
 class SelectToppingPizza {
     private boolean pepperoni = false;
     private boolean cheese = false;

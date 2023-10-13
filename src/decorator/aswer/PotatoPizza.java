@@ -1,3 +1,5 @@
+package decorator.aswer;
+
 public class PotatoPizza extends Pizza{
     Pizza p;
 

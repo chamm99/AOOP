@@ -1,3 +1,5 @@
+package decorator.aswer;
+
 class PepperoniPizza extends PizzaDecorator{
     Pizza p;
     

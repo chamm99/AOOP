@@ -1,3 +1,5 @@
+package decorator.aswer;
+
 class Pizza {
     String name = "";
     int price = 20000;
